@@ -49,7 +49,6 @@ int main() {
 	lower_string(Text);
 
 	cout << "Дан текст: \n" << Text << endl << "Введите слово, которое хотите найти: ";
-
 	cin >> word;
 	cin.ignore();
 
