@@ -13,7 +13,7 @@ void find_word(string Text, string word) {
 	int count_find_word = 0;
 	int word_len = word.length();
 
-	for (int i = 0; i <= (int)Text.length() - word_len; i++) {
+	for (int i = 0; i <= Text.length() - word_len; i++) {
 		if (Text.substr(i, word_len) == word) {
 			bool left_boundary = (i == 0) || !isalpha(Text[i - 1]);
 			bool right_boundary = (i + word_len == Text.length()) || !isalpha(Text[i + word_len]);
