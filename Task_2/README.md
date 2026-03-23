@@ -16,9 +16,9 @@
 
 Для теста запустим программу. Ниже приведена таблица с результатами запуска программы:
 
-    | Текст | Слово для поиска | Результат |
-    | --------------- | ---------------- | ---------------- |
-    | Dog dog dog Hamster cat cat Hamster | dog | Успешно Найдено: 3 слов(a) - dog |
-    | Dog dog dog Hamster cat cat Hamster | cat | Успешно Найдено: 2 слов(a) - cat |
-    | Dog dog dog Hamster cat cat Hamster | hamster | Успешно Найдено: 2 слов(a) - hamster |
-    | Dog dog dog Hamster cat cat Hamster | elephant | Введенное слово - elephant не найдено |
+| Текст | Слово для поиска | Результат |
+| --------------- | ---------------- | ---------------- |
+| Dog dog dog Hamster cat cat Hamster | dog | Успешно Найдено: 3 слов(a) - dog |
+| Dog dog dog Hamster cat cat Hamster | cat | Успешно Найдено: 2 слов(a) - cat |
+| Dog dog dog Hamster cat cat Hamster | hamster | Успешно Найдено: 2 слов(a) - hamster |
+| Dog dog dog Hamster cat cat Hamster | elephant | Введенное слово - elephant не найдено |
