@@ -1,4 +1,6 @@
 ﻿#include <iostream>
+#include <string>
+#include <cctype>
 
 using namespace std;
 
@@ -7,32 +9,41 @@ void lower_string(string& Text) {
 		Text[i] = tolower(Text[i]);
 	}
 }
+
 void find_word(string Text, string word) {
 	int count_find_word = 0;
-	for (int i = 0; i < Text.length() - word.length(); ) {
-		int position = Text.find(word, i);
-		if (position == string::npos) break;
-		count_find_word += 1;
-		i += position + 1;
+	int word_len = word.length();
+
+	for (int i = 0; i <= (int)Text.length() - word_len; i++) {
+		if (Text.substr(i, word_len) == word) {
+			bool left_boundary = (i == 0) || !isalpha(Text[i - 1]);
+			bool right_boundary = (i + word_len == Text.length()) || !isalpha(Text[i + word_len]);
+
+			if (left_boundary && right_boundary) {
+				count_find_word++;
+			}
+		}
 	}
+
 	if (count_find_word != 0) {
 		cout << "Успешно Найдено: " << count_find_word << " слов(a) - " << word << endl;
 	}
 	else {
-		cout << "Введенное слово - " << word << "не найдено" << endl;
+		cout << "Введенное слово - " << word << " не найдено" << endl;
 	}
 }
+
 void test_data(string text, string word) {
 	string test = text;
 	string test_word = word;
 	lower_string(test);
+	lower_string(test_word);
 	find_word(test, test_word);
 }
 
 int main() {
 	setlocale(LC_ALL, "");
 
-	int count = 0;
 	string Text{ "Dog dog dog Hamster cat cat Hamster" };
 	string word;
 
@@ -40,6 +51,7 @@ int main() {
 
 	cout << "Дан текст: \n" << Text << endl << "Введите слово, которое хотите найти: ";
 	cin >> word;
+	cin.ignore();
 
 	lower_string(word);
 
