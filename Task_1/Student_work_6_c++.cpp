@@ -5,7 +5,7 @@ using namespace std;
 
 void create_matrix_and_average(double* matrix, double& average, int& zero_el, int size, int max_number, int min_number, double& summ_matrix) {
     summ_matrix = 0;
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < size; i++) {    
         matrix[i] = rand() % (max_number - min_number + 1) + min_number;
         summ_matrix += matrix[i];
         if (matrix[i] == 0) {
